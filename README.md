@@ -27,6 +27,13 @@ Additional option to remove images pasted in to content (as base64 data) - less 
 ### removePastedImagesMessage (default blank)
 
 Additional option to tell users the correct way to upload images.
+        'clientOptions' => [
+            ...
+            'pastePlainText' => false,
+            'removePastedImages' => true,
+            'removePastedImagesMessage' => "<h1>Please upload images via filemanager or drag'n'drop</h1>",
+            ...
+        ]
 
 # Original yiidoc/yii2-redactor Readme:
 
