@@ -20,10 +20,15 @@ has not been published on packagelist yet...
 
 .size() replaced with .length for JQuery compatibility.
 
+### removePastedImages (default false)
 
+Additional option to remove images pasted in to content (as base64 data) - less restrictive than pastePlainText.
+
+### removePastedImagesMessage (default blank)
+
+Additional option to tell users the correct way to upload images.
 
 # Original yiidoc/yii2-redactor Readme:
-
 
 Installation
 ------------
