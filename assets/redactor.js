@@ -6813,12 +6813,11 @@
 					$.each(this.opts.observe.dropdowns, $.proxy(function(key, value)
 					{
 						var observe = value.observe,
-							element = observe.element,
-							$item   = value.item,
-							inValues = typeof observe['in'] != 'undefined' ? observe['in'] : false,
-							outValues = typeof observe['out'] != 'undefined' ? observe['out'] : false;
-
-						if ($current.closest(element).length() > 0)
+                                                element = observe.element,
+                                                $item   = value.item,
+                                                inValues = typeof observe['in'] != 'undefined' ? observe['in'] : false,
+                                                outValues = typeof observe['out'] != 'undefined' ? observe['out'] : false;
+						if ($current.closest(element).length > 0)
 						{
 							this.observe.setDropdownProperties($item, inValues, outValues);
 						}
