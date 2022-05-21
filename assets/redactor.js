@@ -129,6 +129,7 @@
 		cleanSpaces: true,
 		pastePlainText: false,
                 removePastedImages: false,
+                removePastedImagesMessage: "",
 
 		autosave: false, // false or url
 		autosaveName: false,
@@ -2147,7 +2148,7 @@
 					}
                                         else if (this.opts.removePastedImages)
                                         {
-                                            html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, "");
+                                            html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, removePastedImagesMessage);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
