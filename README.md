@@ -4,6 +4,10 @@ A redactor extension for Yii2 Framework.
 This version is a fork of yiidoc/yii2-redactor to allow some additional
 settings and options.
 
+For install, replace "yiidoc/" with "stump90/" along with a repository if this
+has not been published on packagelist yet...
+
+
 # Original yiidoc/yii2-redactor Readme:
 
 
