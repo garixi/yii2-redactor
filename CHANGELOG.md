@@ -1,4 +1,13 @@
-Yii Framework 2 Change Log
+Change Log 
+==========================
+2.90.0 May 21 2022 (Stuart Millington)
+-----------------------
+- Initial post fork version
+- English (UK) language added
+- .size() replaced with .length for JQuery compatibility
+
+
+Pre-fork Change Log
 ==========================
 
 2.0.2 under development
