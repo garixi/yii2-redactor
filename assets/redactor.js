@@ -1069,7 +1069,7 @@
 					if (this.opts.linebreaks)
 					{
 						var $next = $formatted.next().next();
-						if ($next.length() != 0 && $next[0].tagName === 'BR')
+						if ($next.length != 0 && $next[0].tagName === 'BR')
 						{
 							$next.remove();
 						}
@@ -3582,7 +3582,7 @@
 					var last = this.$editor.children().last();
 					this.$editor.focus();
 
-					if (last.length() === 0) return;
+					if (last.length === 0) return;
 					if (this.utils.isEmpty(this.$editor.html()))
 					{
 
@@ -5600,7 +5600,7 @@
 						if (this.utils.browser('mozilla'))
 						{
 							var td = $(this.keydown.current).closest('td', this.$editor[0]);
-							if (td.length() !== 0 && td.text() !== '')
+							if (td.length !== 0 && td.text() !== '')
 							{
 								e.preventDefault();
 								return false;
@@ -6341,7 +6341,7 @@
 						$children.find('br').remove();
 						$children.append(this.selection.getMarkerAsHtml());
 
-						if (this.opts.linebreaks && this.utils.browser('mozilla') && $children.length() == 2 && this.utils.isEmpty($children.eq(1).text()))
+						if (this.opts.linebreaks && this.utils.browser('mozilla') && $children.length == 2 && this.utils.isEmpty($children.eq(1).text()))
 						{
 							$children.eq(1).remove();
 						}
