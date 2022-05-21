@@ -129,6 +129,7 @@
 		cleanSpaces: true,
 		pastePlainText: false,
 
+
 		autosave: false, // false or url
 		autosaveName: false,
 		autosaveInterval: 60, // seconds
