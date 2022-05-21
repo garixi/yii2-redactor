@@ -1,6 +1,10 @@
-yii2-redactor
+* StuMP90/yii2-redactor
 =============
-Extension redactor for Yii2 Framework.
+A redactor extension for Yii2 Framework.
+This version is a fork of yiidoc/yii2-redactor to allow some additional
+settings and options.
+
+* Original yiidoc/yii2-redactor Readme:
 
 Installation
 ------------
@@ -76,8 +80,3 @@ or config advanced redactor reference [Docs](http://imperavi.com/redactor/docs/)
     ]
 ])?>
 ```
-
-Bummer! i was tested on my project but not have many time to write document on file and usage.
-If you have problem please create a [issue](https://github.com/yiidoc/yii2-redactor/issues)
-
-Thanks!
