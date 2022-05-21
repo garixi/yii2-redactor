@@ -2145,6 +2145,10 @@
 					{
 						return this.clean.getPlainText(html);
 					}
+                                        elseif (this.opts.removePastedImages)
+                                        {
+                                            html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, "");
+                                        }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
 					{
