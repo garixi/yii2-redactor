@@ -1,6 +1,6 @@
 {
-  "name": "yiidoc/yii2-redactor",
-  "description": "Extension redactor for Yii2 Framework.",
+  "name": "stump90/yii2-redactor",
+  "description": "A redactor extension for the Yii2 Framework.",
   "keywords": [
     "yii2",
     "extension",
@@ -12,14 +12,15 @@
   "type": "yii2-extension",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/yiidoc/yii2-redactor/issues?state=open",
-    "wiki": "http://www.yiidoc.com/wiki/",
-    "source": "https://github.com/yiidoc/yii2-redactor"
   },
   "authors": [
     {
       "name": "Nghia Nguyen",
       "email": "zinzinday@gmail.com"
+    },
+    {
+      "name": "Stuart Millington",
+      "email": "gitstm90@dsv1.co.uk"
     }
   ],
   "autoload": {
@@ -29,6 +30,7 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "yiisoft/yii2": "*"
+    "yiisoft/yii2": "*",
+    "fedemotta/yii2-aws-sdk": "*"
   }
 }
