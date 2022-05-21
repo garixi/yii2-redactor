@@ -2145,7 +2145,7 @@
 					{
 						return this.clean.getPlainText(html);
 					}
-                                        elseif (this.opts.removePastedImages)
+                                        else if (this.opts.removePastedImages)
                                         {
                                             html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, "");
                                         }
