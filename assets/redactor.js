@@ -128,7 +128,7 @@
 		cleanOnPaste: true,
 		cleanSpaces: true,
 		pastePlainText: false,
-
+                removePastedImages: false,
 
 		autosave: false, // false or url
 		autosaveName: false,
