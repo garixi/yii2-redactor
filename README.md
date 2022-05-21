@@ -7,6 +7,20 @@ settings and options.
 For install, replace "yiidoc/" with "stump90/" along with a repository if this
 has not been published on packagelist yet...
 
+## Changes
+
+### English (UK) language added
+    'clientOptions' => [
+        ...
+        'lang' => 'en',
+        ...
+    ]
+
+### .size()
+
+.size() replaced with .length for JQuery compatibility.
+
+
 
 # Original yiidoc/yii2-redactor Readme:
 
