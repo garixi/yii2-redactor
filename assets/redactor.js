@@ -2148,7 +2148,7 @@
 					}
                                         else if (this.opts.removePastedImages)
                                         {
-                                            html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, removePastedImagesMessage);
+                                            html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, this.opts.removePastedImagesMessage);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
