@@ -2157,9 +2157,42 @@
                                             var foundPI = html.match(regexPI);
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
-                                                    console.log(item);   
+                                                    //console.log(item);
+                                                    
+                                                    var xhr = new XMLHttpRequest();
+                                                    xhr.open('POST', this.upload.url+"xx");
+                                                    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+                                                    // complete
+                                                    xhr.onreadystatechange = $.proxy(function()
+                                                    {
+                                                        if (xhr.readyState == 4)
+                                                        {
+                                                            var data = xhr.responseText;
+
+                                                            data = data.replace(/^\[/, '');
+                                                            data = data.replace(/\]$/, '');
+
+                                                            var json;
+                                                            try
+                                                            {
+                                                                json = (typeof data === 'string' ? $.parseJSON(data) : data);
+                                                            }
+                                                            catch(err)
+                                                            {
+                                                                json = {
+                                                                    error: true
+                                                                };
+                                                            }
+
+
+                                                            this.progress.hide();
+                                                        }
+                                                    }, this);
+                                                    xhr.send(formData);
                                                 });
                                             }
+                                            console.log("Paste Data: "+json);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
