@@ -2154,10 +2154,11 @@
                                         
                                         if (this.opts.removePastedImages === false) {
                                             //matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
+                                            matches_array = html.match(/style(.[^"]*)\"/gi);
                                             //if (matches_array != null) {
                                             //    console.log(html);
                                             //}
-                                            console.log(html);
+                                            console.log(matches_array);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
