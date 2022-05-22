@@ -2159,7 +2159,11 @@
                                             //}
                                             var regexPI = /data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi;
                                             const foundPI = html.match(regexPI);
-                                            console.log(foundPI);
+                                            if (Array.isArray(foundPI)) {
+                                                foundPI.forEach(function (item, index) {
+                                                    console.log(item, index);
+                                                });
+                                            }
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
