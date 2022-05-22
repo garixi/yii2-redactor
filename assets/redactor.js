@@ -2157,10 +2157,13 @@
                                             var foundPI = html.match(regexPI);
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
+                                                    var regexImageExt = /data\:image\/(.[^;]*);/i;
+                                                    var imageExt = item.match(regexImageExt);
+
+
                                                     binaryItem = atob(item);
-                                                    
-                                                        
-                                                    console.log(item, index);
+
+                                                    console.log(imageExt);
                                                 });
                                             }
                                         }
