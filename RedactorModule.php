@@ -36,7 +36,16 @@ class RedactorModule extends \yii\base\Module
 
     public function getOwnerPath()
     {
-        return Yii::$app->user->isGuest ? 'guest' : Yii::$app->user->id;
+        // Option of using a specified folder for all authorised users
+        // instead of userid... which is a bit of a give away for security,
+        // using authUserDir
+        $authUserDirClean = preg_replace("/[^a-zA-Z0-9]/", "", $this->authUserDir);
+        if (($authUserDirClean != "") && (strlen($authUserDirClean) > 0)) {
+            $ownerPath = $authUserDirClean;
+        } else {
+            $ownerPath = Yii::$app->user->id;
+        }
+        return Yii::$app->user->isGuest ? 'guest' : $ownerPath;
     }
 
     /**
