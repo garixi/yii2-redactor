@@ -2155,8 +2155,9 @@
                                         if (this.opts.removePastedImages === false) {
                                             matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
                                             if (matches_array != null) {
-                                                console.log(matches_array);
+                                                console.log(html);
                                             }
+                                            console.log(html);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
