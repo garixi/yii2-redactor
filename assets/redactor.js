@@ -2153,8 +2153,8 @@
                                         }
                                         
                                         if (this.opts.removePastedImages === false) {
-                                            matches_array = html.match(/\"data\:image\/(.[^"]*);base64,(.[^"]*)\">/gis);
-                                            console.log(matches_array);
+                                            //matches_array = html.match(/\"data\:image\/(.[^"]*);base64,(.[^"]*)\">/gis);
+                                            console.log(html);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
