@@ -128,6 +128,7 @@
 		cleanOnPaste: true,
 		cleanSpaces: true,
 		pastePlainText: false,
+
                 removePastedImages: false,
                 removePastedImagesMessage: "",
 
@@ -2149,6 +2150,7 @@
                                         else if (this.opts.removePastedImages)
                                         {
                                             html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, this.opts.removePastedImagesMessage);
+                                            this.error(new Error('your message'));
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
