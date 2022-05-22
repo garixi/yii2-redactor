@@ -2160,7 +2160,7 @@
                                                     //console.log(item);
                                                     
                                                     var xhr = new XMLHttpRequest();
-                                                    xhr.open('POST', this.upload.url+"xx");
+                                                    xhr.open('POST', this.opts.imageUpload);
                                                     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
                                                     // complete
