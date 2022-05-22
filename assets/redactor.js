@@ -2160,7 +2160,7 @@
                                                     //console.log(item);
                                                     
                                                     var xhr = new XMLHttpRequest();
-                                                    xhr.open('POST', this.opts.imageUpload);
+                                                    xhr.open('POST', 'http://backend-yii2adv.test/redactor/upload/image');
                                                     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
                                                     // complete
