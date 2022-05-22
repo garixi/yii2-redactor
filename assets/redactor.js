@@ -2157,7 +2157,9 @@
                                             var foundPI = html.match(regexPI);
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
+                                                    binaryItem = atob(item);
                                                     
+                                                        
                                                     console.log(item, index);
                                                 });
                                             }
@@ -8795,7 +8797,7 @@
 				{
 					e = e.originalEvent || e;
 					var files = e.dataTransfer.files;
-
+                                        console.log(files);
 					this.upload.traverseFile(files[0], e);
 				},
 				traverseFile: function(file, e)
