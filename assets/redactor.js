@@ -2158,12 +2158,9 @@
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
                                                     //console.log(item);
-                                                    this.upload.type = 'image';
-                                                    this.upload.url = (this.upload.type == 'image') ? this.opts.imageUpload : this.opts.fileUpload;
-                                                    this.upload.callback = (this.upload.type == 'image') ? this.image.insert : this.file.insert;
                                                     
                                                     var xhr = new XMLHttpRequest();
-                                                    xhr.open('POST', this.upload.url);
+                                                    xhr.open('POST', this.opts.imageUpload);
                                                     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
                                                     // complete
