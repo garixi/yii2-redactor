@@ -2153,10 +2153,10 @@
                                         }
                                         
                                         if (this.opts.removePastedImages === false) {
-                                            matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
-                                            if (matches_array != null) {
-                                                console.log(html);
-                                            }
+                                            //matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
+                                            //if (matches_array != null) {
+                                            //    console.log(html);
+                                            //}
                                             console.log(html);
                                         }
 
