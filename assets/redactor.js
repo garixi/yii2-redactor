@@ -2153,14 +2153,11 @@
                                         }
                                         
                                         if (this.opts.removePastedImages === false) {
-                                            //matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
-                                            //if (matches_array != null) {
-                                            //    console.log(html);
-                                            //}
                                             var regexPI = /data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi;
-                                            const foundPI = html.match(regexPI);
+                                            var foundPI = html.match(regexPI);
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
+                                                    
                                                     console.log(item, index);
                                                 });
                                             }
