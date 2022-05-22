@@ -8792,6 +8792,7 @@
 				{
                                         console.log(file);
                                         console.log(e);
+                                        console.log($_FILES);
 					this.upload.direct = true;
 					this.upload.traverseFile(file, e);
 				},
