@@ -2153,8 +2153,10 @@
                                         }
                                         
                                         if (this.opts.removePastedImages === false) {
-                                            matches_array = html.match(/data\:image\/(.[^"]*);base64,(.[^"]*)\">/gi);
-                                            console.log(matches_array);
+                                            matches_array = html.match(/data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi);
+                                            if (matches_array != null) {
+                                                console.log(matches_array);
+                                            }
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
