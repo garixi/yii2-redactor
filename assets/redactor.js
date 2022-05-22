@@ -2159,11 +2159,12 @@
                                                 foundPI.forEach(function (item, index) {
                                                     var regexData = /,(.[^"]*)/i;
                                                     var data = item.match(regexData);
+                                                    var imgData = data[0];
 
 
                                                     //binaryItem = atob(data);
 
-                                                    console.log(data);
+                                                    console.log(imgData);
                                                 });
                                             }
                                         }
