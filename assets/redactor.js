@@ -2162,7 +2162,7 @@
                                                     var imgData = data[0].substring(1);
 
 
-                                                    binaryItem = atob(data);
+                                                    binaryItem = atob(imgData);
 
                                                     console.log(binaryItem);
                                                 });
