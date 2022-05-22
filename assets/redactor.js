@@ -2164,7 +2164,7 @@
 
                                                     binaryItem = atob(imgData);
 
-                                                    console.log(binaryItem);
+                                                    console.log(imgData);
                                                 });
                                             }
                                         }
