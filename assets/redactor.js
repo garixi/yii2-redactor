@@ -2163,7 +2163,7 @@
 
                                                     //binaryItem = atob(item);
 
-                                                    console.log(imageExt);
+                                                    console.log(imageExt[1]);
                                                 });
                                             }
                                         }
