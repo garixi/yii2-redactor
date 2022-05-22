@@ -2158,7 +2158,7 @@
                                             if (Array.isArray(foundPI)) {
                                                 foundPI.forEach(function (item, index) {
                                                     var regexData = /,(.[^"]*)/i;
-                                                    var data = item.match(regexImageExt);
+                                                    var data = item.match(regexData);
 
 
                                                     //binaryItem = atob(data);
