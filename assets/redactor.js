@@ -8790,6 +8790,8 @@
 				},
 				directUpload: function(file, e)
 				{
+                                        console.log(file);
+                                        console.log(e);
 					this.upload.direct = true;
 					this.upload.traverseFile(file, e);
 				},
@@ -8797,7 +8799,6 @@
 				{
 					e = e.originalEvent || e;
 					var files = e.dataTransfer.files;
-                                        console.log(files);
 					this.upload.traverseFile(files[0], e);
 				},
 				traverseFile: function(file, e)
