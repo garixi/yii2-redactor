@@ -1,5 +1,9 @@
 Change Log 
 ==========================
+2.90.2 May 22 2022 (Stuart Millington)
+-----------------------
+- Additional config option added - authUserDir (default blank, hides logged in user id's in file paths and uses a common folder for all logged in users)
+
 2.90.1 May 21 2022 (Stuart Millington)
 -----------------------
 - Additional option added - removePastedImages (default false)

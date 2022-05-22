@@ -39,6 +39,22 @@ Additional option to tell users the correct way to upload images.
         ]
 ```
 
+### authUserDir config option
+
+Additional config option added - authUserDir (default blank, allowed characters a-zA-Z0-9 only)
+When set, this hides logged in user id's in file paths and uses a common folder for all logged in users. The guest user file path is still 'guest'.
+```
+    'modules' => [
+        'redactor' => [
+            'class' => 'yii\redactor\RedactorModule',
+            'uploadDir' => '@webroot/uploads',
+            'uploadUrl' => '@web/uploads',
+            'imageAllowExtensions'=>['jpg','jpeg','png','gif','webp'],
+            'authUserDir' => 'files'
+        ],
+    ],
+```
+
 # Original yiidoc/yii2-redactor Readme:
 
 Installation
