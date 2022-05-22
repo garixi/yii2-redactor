@@ -2161,7 +2161,7 @@
                                                     var imageExt = item.match(regexImageExt);
 
 
-                                                    binaryItem = atob(item);
+                                                    //binaryItem = atob(item);
 
                                                     console.log(imageExt);
                                                 });
