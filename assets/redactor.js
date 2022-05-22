@@ -2151,6 +2151,11 @@
                                         {
                                             html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, this.opts.removePastedImagesMessage);
                                         }
+                                        
+                                        if (this.opts.removePastedImages === false) {
+                                            matches_array = html.match(/\"data\:image\/(.[^"]*);base64,(.[^"]*)\">/gis);
+                                            console.log(matches_array);
+                                        }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
 					{
