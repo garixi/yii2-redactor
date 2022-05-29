@@ -128,7 +128,6 @@
 		cleanOnPaste: true,
 		cleanSpaces: true,
 		pastePlainText: false,
-
                 removePastedImages: false,
                 removePastedImagesMessage: "",
 
@@ -2150,49 +2149,6 @@
                                         else if (this.opts.removePastedImages)
                                         {
                                             html = html.replace(/<img src=\"data\:image\/(.[^;]*);base64,(.[^>]*)\">/gis, this.opts.removePastedImagesMessage);
-                                        }
-                                        
-                                        if (this.opts.removePastedImages === false) {
-                                            var regexPI = /data\:image\/(.[^;]*);base64,(.[^"]*)\"/gi;
-                                            var foundPI = html.match(regexPI);
-                                            if (Array.isArray(foundPI)) {
-                                                foundPI.forEach(function (item, index) {
-                                                    //console.log(item);
-                                                    
-                                                    var xhr = new XMLHttpRequest();
-                                                    xhr.open('POST', 'http://backend-yii2adv.test/redactor/upload/image');
-                                                    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
-                                                    // complete
-                                                    xhr.onreadystatechange = $.proxy(function()
-                                                    {
-                                                        if (xhr.readyState == 4)
-                                                        {
-                                                            var data = xhr.responseText;
-
-                                                            data = data.replace(/^\[/, '');
-                                                            data = data.replace(/\]$/, '');
-
-                                                            var json;
-                                                            try
-                                                            {
-                                                                json = (typeof data === 'string' ? $.parseJSON(data) : data);
-                                                            }
-                                                            catch(err)
-                                                            {
-                                                                json = {
-                                                                    error: true
-                                                                };
-                                                            }
-
-
-                                                            this.progress.hide();
-                                                        }
-                                                    }, this);
-                                                    xhr.send(formData);
-                                                });
-                                            }
-                                            console.log("Paste Data: "+json);
                                         }
 
 					if (!this.utils.isSelectAll() && typeof setMode == 'undefined')
@@ -8820,9 +8776,6 @@
 				},
 				directUpload: function(file, e)
 				{
-                                        console.log(file);
-                                        console.log(e);
-                                        console.log($_FILES);
 					this.upload.direct = true;
 					this.upload.traverseFile(file, e);
 				},
@@ -8830,6 +8783,7 @@
 				{
 					e = e.originalEvent || e;
 					var files = e.dataTransfer.files;
+
 					this.upload.traverseFile(files[0], e);
 				},
 				traverseFile: function(file, e)
