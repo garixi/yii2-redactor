@@ -55,6 +55,7 @@ When set, this hides logged in user id's in file paths and uses a common folder 
     ],
 ```
 
+
 # Original yiidoc/yii2-redactor Readme:
 
 Installation
