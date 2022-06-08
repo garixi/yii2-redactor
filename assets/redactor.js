@@ -128,6 +128,7 @@
 		cleanOnPaste: true,
 		cleanSpaces: true,
 		pastePlainText: false,
+                uploadPastedImages: true,
                 removePastedImages: false,
                 removePastedImagesMessage: "",
 
@@ -1397,8 +1398,8 @@
 					}, this));
 
 					// paste
-					this.$editor.on('paste.redactor', $.proxy(this.paste.init, this));
-
+					this.$editor.on('paste.redactor', $.proxy(this.paste.init, this)); // TEMPTEMP
+                                        
 					// cut
 					this.$editor.on('cut.redactor', $.proxy(this.code.sync, this));
 
@@ -2133,6 +2134,7 @@
 				},
 				onPaste: function(html, setMode)
 				{
+                                   
 					html = $.trim(html);
 					html = html.replace(/\$/g, '&#36;');
 
@@ -7191,7 +7193,7 @@
 
 					setTimeout($.proxy(function()
 					{
-						var html = this.$pasteBox.html();
+                                                var html = this.$pasteBox.html();
 
 						this.$pasteBox.remove();
 

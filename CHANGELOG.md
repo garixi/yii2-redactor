@@ -1,5 +1,9 @@
 Change Log 
 ==========================
+2.90.3 June 08 2022 (Stuart Millington)
+-----------------------
+- Integrated CFDan's clipboardPaste plugin and added clipboard upload action.
+
 2.90.2 May 22 2022 (Stuart Millington)
 -----------------------
 - Additional config option added - authUserDir (default blank, hides logged in user id's in file paths and uses a common folder for all logged in users)

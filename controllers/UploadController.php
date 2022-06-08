@@ -36,6 +36,7 @@ class UploadController extends \yii\web\Controller
         return [
             'file' => 'yii\redactor\actions\FileUploadAction',
             'image' => 'yii\redactor\actions\ImageUploadAction',
+            'image-clip' => 'yii\redactor\actions\ImageClipUploadAction',
             'image-json' => 'yii\redactor\actions\ImageManagerJsonAction',
             'file-json' => 'yii\redactor\actions\FileManagerJsonAction',
         ];

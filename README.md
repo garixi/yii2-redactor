@@ -55,6 +55,23 @@ When set, this hides logged in user id's in file paths and uses a common folder 
     ],
 ```
 
+### Integrate Redactor-10-clipboardPaste-plugin
+
+Integrated CFDan's clipboardPaste plugin and added clipboard upload action.
+
+Source: https://github.com/CFDan/Redactor-10-clipboardPaste-plugin
+```
+        'clientOptions' => [
+            ...
+            'removePastedImages' => true,
+            'removePastedImagesMessage' => "",
+            'plugins' => ['fontcolor','imagemanager','filemanager','clipboardPaste'],
+            'clipboardUploadUrl' => ['/redactor/upload/image-clip'],
+            'clipboardUpload' => true,
+            ...
+        ]
+```
+
 # Original yiidoc/yii2-redactor Readme:
 
 Installation
