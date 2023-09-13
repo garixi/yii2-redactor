@@ -19,6 +19,11 @@ class ImageClipUploadAction extends \yii\base\Action
 {
     function run()
     {
+        $dir = Yii::$app->request->get('dir');
+        if($dir){
+            Yii::$app->getModule('redactor')->authUserDir = $dir;
+        }
+
         //Yii::debug($_POST['contentType']);
         // e.g.
         // image/png

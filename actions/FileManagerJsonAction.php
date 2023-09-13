@@ -26,6 +26,11 @@ class FileManagerJsonAction extends Action
 
     public function run()
     {
+        $dir = Yii::$app->request->get('dir');
+        if($dir){
+            Yii::$app->getModule('redactor')->authUserDir = $dir;
+        }
+
         $config = ['recursive' => true];
         if (!is_null(Yii::$app->controller->module->imageAllowExtensions)) {
             $onlyExtensions = array_map(function ($ext) {

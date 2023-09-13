@@ -20,6 +20,11 @@ class ImageUploadAction extends \yii\base\Action
     function run()
     {
         if (isset($_FILES)) {
+            $dir = Yii::$app->request->get('dir');
+            if($dir){
+                Yii::$app->getModule('redactor')->authUserDir = $dir;
+            }
+
             $model = new ImageUploadModel();
             if ($model->upload()) {
                 return $model->getResponse();

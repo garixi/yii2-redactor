@@ -1,5 +1,5 @@
 {
-  "name": "stump90/yii2-redactor",
+  "name": "garixi/yii2-redactor",
   "description": "A redactor extension for the Yii2 Framework.",
   "keywords": [
     "yii2",
@@ -21,6 +21,10 @@
     {
       "name": "Stuart Millington",
       "email": "gitstm90@dsv1.co.uk"
+    },
+    {
+      "name": "Giovanni Arixi",
+      "email": "garixi@cuoriilabs.com"
     }
   ],
   "autoload": {

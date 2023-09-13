@@ -27,6 +27,11 @@ class ImageManagerJsonAction extends \yii\base\Action
 
     public function run()
     {
+        $dir = Yii::$app->request->get('dir');
+        if($dir){
+            Yii::$app->getModule('redactor')->authUserDir = $dir;
+        }
+
         $onlyExtensions = array_map(function ($ext) {
             return '*.' . $ext;
         }, Yii::$app->controller->module->imageAllowExtensions);

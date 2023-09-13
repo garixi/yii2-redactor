@@ -15,6 +15,12 @@ class FileUploadAction extends Action
     function run()
     {
         if (isset($_FILES)) {
+            
+            $dir = Yii::$app->request->get('dir');
+            if($dir){
+                Yii::$app->getModule('redactor')->authUserDir = $dir;
+            }
+
             $model = new FileUploadModel();
             if ($model->upload()) {
                 return $model->getResponse();
