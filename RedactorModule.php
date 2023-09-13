@@ -39,7 +39,8 @@ class RedactorModule extends \yii\base\Module
         // Option of using a specified folder for all authorised users
         // instead of userid... which is a bit of a give away for security,
         // using authUserDir
-        $authUserDirClean = preg_replace("/[^a-zA-Z0-9]/", "", $this->authUserDir);
+        //$authUserDirClean = preg_replace("/[^a-zA-Z0-9]/", "", $this->authUserDir);
+        $authUserDirClean = $this->authUserDir;
         if (($authUserDirClean != "") && (strlen($authUserDirClean) > 0)) {
             $ownerPath = $authUserDirClean;
         } else {
