@@ -38,6 +38,29 @@ Additional option to tell users the correct way to upload images.
             ...
         ]
 ```
+### dir parameter for upload actions in widget
+
+additional querystring parameter dir to choose the target upload directory
+
+```
+        
+                    'clientOptions' => [
+                        'imageManagerJson' => ['/redactor/upload/image-json'],
+                        'imageUpload' => ['/redactor/upload/image', 'dir' => 'contents/about_page/files'],
+                        'fileUpload' => ['/redactor/upload/file','dir' => 'contents/about_page/files'],
+                        ...
+                    ]
+```
+
+```
+        
+                    'clientOptions' => [
+                        'imageManagerJson' => ['/redactor/upload/image-json'],
+                        'imageUpload' => ['/redactor/upload/image', 'dir' => 'contents/contacts_page/files'],
+                        'fileUpload' => ['/redactor/upload/file','dir' => 'contents/contacts_page/files'],
+                        ...
+                    ]
+```
 
 ### authUserDir config option
 
